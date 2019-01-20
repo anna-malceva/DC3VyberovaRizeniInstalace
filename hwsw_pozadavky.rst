@@ -33,6 +33,40 @@ interní DC3 prostřednictvím zaslání klientského certifikátu. Z tohoto dů
 nastavit příjímání klientských certifikátů.
 
 **Postup:**
-Nastavení příjímání klientských certifikátů se provede úpravou souboru **C:\Windows\System32\inetsrv\config\applicationHost.config**. 
+Nastavení příjímání klientských certifikátů se provede úpravou souboru **C:\\Windows\\System32\\inetsrv\\config\\applicationHost.config**. 
 
 .. note:: Před úpravou souboru doporučujeme udělat jeho zálohu.
+
+1. Vyhledat iisClientCertificateMappingAuthentication a nastavit **enabled** na **true**
+
+.. code-block:: xml
+
+   <iisClientCertificateMappingAuthentication enabled="true"> </iisClientCertificateMappingAuthentication>
+
+2. Vyhledat sekci **<jméno site>/<jméno virtuálního ardesáře>** a pod ní přidat 2 nové sekce. Začátek cesty **path="Default Web Site/DC3** je třeba upravit shodně podle první sekce.
+
+.. code-block:: xml
+
+    <location path="Default Web Site/DC3/login/certificateauth">
+      <system.webServer>
+        <security>
+          <access sslFlags="Ssl, SslNegotiateCert, SslRequireCert" />
+          <authentication>
+            <anonymousAuthentication enabled="true" />
+            <windowsAuthentication enabled="true" />
+          </authentication>
+        </security>
+      </system.webServer>
+    </location>
+    <location path="Default Web Site/DC3/vyberova-rizeni-api">
+      <system.webServer>
+        <security>
+          <access sslFlags="Ssl, SslNegotiateCert, SslRequireCert" />
+          <authentication>
+          <anonymousAuthentication enabled="true" />
+          <windowsAuthentication enabled="false" />
+          </authentication>
+        </security>
+      </system.webServer>
+    </location>
+    
