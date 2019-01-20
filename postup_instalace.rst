@@ -24,16 +24,9 @@ naimportovat příslušné certifikáty.
 
 3. Spustit import klientského certifikátu pro ověřování. Spuštění proveďte pomocí .cmd souboru **InstallCertVyberovaRizeni.cmd** spustit jako správce).
 
-4. Import provede nahrání certifikátu **DC3 CA** a vlastního klientského certifikátu **DC3VyberovaRizeni**.
-Certifikát DC3 CA musí být přítomen ve složce **Trusted root authorities** (Důvěryhodné kořenové
-certifikační autority) a vlastní klientský certifikát **DC3VyberovaRizeni** by se měl objevit ve složce
-**Personal** (Osobní). Správnost nahrání klientského certifikátu DC3VyberovaRizeni lze ověřit tak, že při
-jeho otevření by měl být **validní**. Pokud by se certifikát z nějakého důvodu nenaimportoval, je třeba ho
-naimportovat ručně (heslo uvedené v .cmd souboru).
+4. Import provede nahrání certifikátu **DC3 CA** a vlastního klientského certifikátu **DC3VyberovaRizeni**. Certifikát DC3 CA musí být přítomen ve složce **Trusted root authorities** (Důvěryhodné kořenové certifikační autority) a vlastní klientský certifikát **DC3VyberovaRizeni** by se měl objevit ve složce **Personal** (Osobní). Správnost nahrání klientského certifikátu DC3VyberovaRizeni lze ověřit tak, že při jeho otevření by měl být **validní**. Pokud by se certifikát z nějakého důvodu nenaimportoval, je třeba ho naimportovat ručně (heslo uvedené v .cmd souboru).
 
-5. Nyní je nutné pro naimportovaný certifikát nastavit oprávnění na Private key. Pomocí **pravého tlačítka
--> All tasks -> Manage private keys...** přidat účet **IIS APPPOOL\\<jmeno poolu>**. Např. IIS APPPOOL\\DC3VyberovaRizeniPool. 
-Úroveň oprávnění nastavit na **Full control**.
+5. Nyní je nutné pro naimportovaný certifikát nastavit oprávnění na Private key. Pomocí **pravého tlačítka -> All tasks -> Manage private keys...** přidat účet **IIS APPPOOL\\<jmeno poolu>**. Např. IIS APPPOOL\\DC3VyberovaRizeniPool. Úroveň oprávnění nastavit na **Full control**.
 
 
 Nastavení oprávnění pro DB
