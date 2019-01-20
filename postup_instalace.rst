@@ -36,7 +36,7 @@ jeho otevření by měl být **validní**. Pokud by se certifikát z nějakého 
 naimportovat ručně (heslo uvedené v .cmd souboru).
 
 5. Nyní je nutné pro naimportovaný certifikát nastavit oprávnění na Private key. Pomocí **pravého tlačítka
--> All tasks -> Manage private keys...** přidat účet **IIS APPPOOL\<jmeno poolu>**. Např. IIS APPPOOL\DC3VyberovaRizeniPool. 
+-> All tasks -> Manage private keys...** přidat účet **IIS APPPOOL\\<jmeno poolu>**. Např. IIS APPPOOL\\DC3VyberovaRizeniPool. 
 Úroveň oprávnění nastavit na **Full control**.
 
 
