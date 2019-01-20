@@ -53,3 +53,17 @@ V tomto kroku je třeba nastavit konfigurační soubor appsettings.json pro spr�
 4. Nastavit klíč **Theme** pro zobrazení správného brandingu pro zvoleného zákazníka.
 
 5. Nastavit další klíče uvedené v sekci Pages. Pro správné popisy stránek, patičky, SEO apod.
+
+Zveřejnění inzerátu
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Po úspěšném dokončení předchozích kroků je třeba otestovat, zda vypsaná výběrová řízení jsou
+zobrazována ve veřejné části na základě jejich inzerátů, platnosti a platnosti zveřejnění.
+
+1. Přepnout se do **administrace** výběrových řízení a založit platné výběrové řízení.
+
+2. Pro výběrové řízení založit **inzerát** a zařadit ho do **typu** pro zveřejnění na webu (Externi)
+
+3. Nastavit platné **zveřejnění** inzerátu
+
+4. Pokud je vše nastaveno správně, uvedený inzerát se zobrazí ve veřejné části a je možné provést registraci uchazeče skrze registrační formulář.
