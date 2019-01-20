@@ -39,3 +39,17 @@ umístěné v adresáři s ostatními soubory webové aplikace.
 Aby bylo možné do DB přistupovat, je nutné na oba soubory nastavit stejná oprávnění pro identitu IIS
 Poolu, jako v případě nastavení oprávnění na klientský certifikát.
 
+Konfigurace webové aplikace
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+V tomto kroku je třeba nastavit konfigurační soubor appsettings.json pro správné nastavení zobrazování zveřejněných inzerátů.
+
+1. Otevřít soubor **appsettings.json**
+
+2. Nastavit klíč na **DC3BaseUrl**. Url musí směřovat na interní DC3 kde je zapnut modul Výběrová řízení
+
+3. Zkontrolovat klíč **TypInzeratuKod**. Měl by obsahovat kód číselníkové položky z číselníku **Typ inzerátu**. Všechny inzeráty zveřejněné pod tímto typem budou vypsány v seznamu volných pozic ve veřejné části modulu Výběrová řízení. Default je Externi.
+
+4. Nastavit klíč **Theme** pro zobrazení správného brandingu pro zvoleného zákazníka.
+
+5. Nastavit další klíče uvedené v sekci Pages. Pro správné popisy stránek, patičky, SEO apod.
