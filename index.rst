@@ -5,9 +5,7 @@ Instalace
    :titlesonly:
 
    hwsw_pozadavky
-   postup_instalace
-   aktualizace-a-obnoveni
-   postup_instalace_vyvoj
+   postup_instalace   
    
 
 Úvod
