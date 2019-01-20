@@ -10,8 +10,7 @@ Instalace webové aplikace
 
 - V rozšiřujícím nastavení poolu je třeba zapnout vlastnost **Load User Profile** (Načíst profil uživatele) = True.
 
-- Vytvořit novou webovou aplikaci a nasměrovat ji na adresář s buildem veřejné části modulu Výběrová
-řízení. Jako pool zvolit nově vytvořený.
+- Vytvořit novou webovou aplikaci a nasměrovat ji na adresář s buildem veřejné části modulu Výběrová řízení. Jako pool zvolit nově vytvořený.
 
 Import certifikátů
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
