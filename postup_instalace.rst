@@ -6,8 +6,7 @@ Následující kapitola popisuje postup nasazení veřejné části modulu **Vý
 Instalace webové aplikace
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- Na webovém serveru **veřejné části** v IIS je třeba vytvořit nový aplikační pool s názvem např. 
-**DC3VyberovaRizeniPool**. Pool musí být nastaven jako **No managed code** (Bez spravovaného kódu).
+- Na webovém serveru **veřejné části** v IIS je třeba vytvořit nový aplikační pool s názvem např. **DC3VyberovaRizeniPool**. Pool musí být nastaven jako **No managed code** (Bez spravovaného kódu).
 
 - V rozšiřujícím nastavení poolu je třeba zapnout vlastnost **Load User Profile** (Načíst profil uživatele) = True.
 
