@@ -31,3 +31,11 @@ naimportovat příslušné certifikáty.
 
 Nastavení oprávnění pro DB
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Veřejná část modulu Výběrová řízení provádí ukládání dat z registračních formulářů do lokální embedded
+databáze (SQL LocalDB). Databázi tvoří 2 soubory **DC3VyberovaRizeni.mdf** a **DC3VyberovaRizeni.ldf**
+umístěné v adresáři s ostatními soubory webové aplikace.
+
+Aby bylo možné do DB přistupovat, je nutné na oba soubory nastavit stejná oprávnění pro identitu IIS
+Poolu, jako v případě nastavení oprávnění na klientský certifikát.
+
