@@ -2,7 +2,7 @@ Minimální HW a SW požadavky
 ===============================
 
 Veřejný webový server
-----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Veřejná část modulu **Výběrová řízení** je webová aplikace v prostředí **ASP.NET**. Pro její instalaci a
 následný běh je nutné splnit některé minimální HW a SW požadavky.
@@ -18,7 +18,7 @@ Potřebná instalační .msi lze stáhnout buď přímo z webu nebo jsou obsaže
 podkladech.
 
 Aplikační server pro DC3
-----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Veřejná část modulu Výběrová řízení komunikuje s informačním systémem DC3 po zabezpečeném SSL
 kanále. Z tohoto důvodu je nutné, aby interní instalace DC3 byla nakonfigurována pro běh pod HTTPS.
@@ -32,7 +32,8 @@ aby přijímala i SSL klientské certifikáty. Veřejná část modulu Výběrov
 interní DC3 prostřednictvím zaslání klientského certifikátu. Z tohoto důvodu je třeba na interní DC3
 nastavit příjímání klientských certifikátů.
 
-**Postup:**
+Nastavení SSL
+------------------
 Nastavení příjímání klientských certifikátů se provede úpravou souboru **C:\\Windows\\System32\\inetsrv\\config\\applicationHost.config**. 
 
 .. note:: Před úpravou souboru doporučujeme udělat jeho zálohu.
@@ -70,3 +71,14 @@ Nastavení příjímání klientských certifikátů se provede úpravou souboru
       </system.webServer>
     </location>
     
+
+Nastavení limitu na upload dokumentů
+-------------------------------------------------
+
+Pro správny přenost nahraných dokumentů (přílohy životopisů apod.) je třeba dále v souboru **C:\\Windows\\System32\\inetsrv\\config\\applicationHost.config** nastavit:
+
+.. code-block:: xml
+
+   <system.webServer>
+      <serverRuntime uploadReadAheadSize="2147483647" />
+   </system.webServer>
