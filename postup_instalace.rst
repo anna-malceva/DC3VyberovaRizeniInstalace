@@ -28,11 +28,17 @@ naimportovat příslušné certifikáty.
 
 2. Přes menu Soubor -> Přidat nebo odebrat modul snap-in vybrat Certifikáty a zvolit certifikáty na tomto počítači.
 
+.. image:: /Img/ConsoleCert.PNG
+
 3. Spustit import klientského certifikátu pro ověřování. Spuštění proveďte pomocí .cmd souboru **InstallCertVyberovaRizeni.cmd** spustit jako správce).
 
 4. Import provede nahrání certifikátu **DC3 CA** a vlastního klientského certifikátu **DC3VyberovaRizeni**. Certifikát DC3 CA musí být přítomen ve složce **Trusted root authorities** (Důvěryhodné kořenové certifikační autority) a vlastní klientský certifikát **DC3VyberovaRizeni** by se měl objevit ve složce **Personal** (Osobní). Správnost nahrání klientského certifikátu DC3VyberovaRizeni lze ověřit tak, že při jeho otevření by měl být **validní**. Pokud by se certifikát z nějakého důvodu nenaimportoval, je třeba ho naimportovat ručně (heslo uvedené v .cmd souboru).
 
+.. image:: /Img/ConsoleCert3.PNG
+
 5. Nyní je nutné pro naimportovaný certifikát nastavit oprávnění na Private key. Pomocí **pravého tlačítka -> All tasks -> Manage private keys...** přidat účet **IIS APPPOOL\\<jmeno poolu>**. Např. IIS APPPOOL\\DC3VyberovaRizeniPool. Úroveň oprávnění nastavit na **Full control**.
+
+.. image:: /Img/CertPerm.PNG
 
 
 Nastavení oprávnění pro DB
@@ -44,6 +50,8 @@ umístěné v adresáři s ostatními soubory webové aplikace.
 
 Aby bylo možné do DB přistupovat, je nutné na oba soubory nastavit stejná oprávnění pro identitu IIS
 Poolu, jako v případě nastavení oprávnění na klientský certifikát.
+
+.. image:: /Img/CertPerm2.PNG
 
 Konfigurace webové aplikace
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -68,8 +76,14 @@ zobrazována ve veřejné části na základě jejich inzerátů, platnosti a pl
 
 1. Přepnout se do **administrace** výběrových řízení a založit platné výběrové řízení.
 
+.. image:: /Img/VyberoveRizeni.PNG
+
 2. Pro výběrové řízení založit **inzerát** a zařadit ho do **typu** pro zveřejnění na webu (Externi)
 
+.. image:: /Img/Inzerat.PNG
+
 3. Nastavit platné **zveřejnění** inzerátu
+
+.. image:: /Img/InzeratZverejneni.PNG
 
 4. Pokud je vše nastaveno správně, uvedený inzerát se zobrazí ve veřejné části a je možné provést registraci uchazeče skrze registrační formulář.
