@@ -20,7 +20,11 @@ naimportovat příslušné certifikáty.
 
 1. Spustit konzolu pro import certifikátů přes Start > Run > mmc
 
+.. image:: /img/PoolAVR.PNG 
+
 2. Přes menu Soubor -> Přidat nebo odebrat modul snap-in vybrat Certifikáty a zvolit certifikáty na tomto počítači.
+
+.. image:: /img/PoolAVR2.PNG 
 
 3. Spustit import klientského certifikátu pro ověřování. Spuštění proveďte pomocí .cmd souboru **InstallCertVyberovaRizeni.cmd** spustit jako správce).
 
