@@ -1,6 +1,6 @@
 
 Úvod
-===============
+============================
 
 Modul Výběrová řízení je určen pro správu a vypisování firemních výběrových řízení, jejich zveřejňování na
 web, registraci uchazečů a následné zpracování registrovaných uchazečů. Modul se skládá ze dvou částí:
