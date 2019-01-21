@@ -34,7 +34,7 @@ nastavit příjímání klientských certifikátů.
 
 Nastavení SSL
 ------------------
-Nastavení příjímání klientských certifikátů se provede úpravou souboru **C:\\Windows\\System32\\inetsrv\\config\\applicationHost.config**. 
+Nastavení příjímání klientských certifikátů se provede úpravou souboru **C:\\Windows\\System32\\inetsrv\\config\\applicationHost.config** na **Aplikačním serveru s DC3**. 
 
 .. note:: Před úpravou souboru doporučujeme udělat jeho zálohu.
 
@@ -75,7 +75,14 @@ Nastavení příjímání klientských certifikátů se provede úpravou souboru
 Nastavení limitu na upload dokumentů
 -------------------------------------------------
 
-Pro správny přenost nahraných dokumentů (přílohy životopisů apod.) je třeba dále v souboru **C:\\Windows\\System32\\inetsrv\\config\\applicationHost.config** nastavit:
+Pro správny přenost nahraných dokumentů (přílohy životopisů apod.) je třeba dále v souboru **C:\\Windows\\System32\\inetsrv\\config\\applicationHost.config** na **Aplikačním serveru s DC3** nastavit:
+
+1. Launch **Internet Information Services (IIS) Manager**
+2. Select the site that you are hosting your web application under it.
+3. In the Features section, double click “Configuration Editor”
+4. Under **Section** select: system.webServer then serverRuntime
+5. Modify the **uploadReadAheadSize** section to be max value 2147483647 (the value there is in Bytes)
+6. Click Apply
 
 .. code-block:: xml
 
