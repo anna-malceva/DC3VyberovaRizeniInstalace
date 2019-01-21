@@ -75,7 +75,7 @@ Nastavení příjímání klientských certifikátů se provede úpravou souboru
 Nastavení limitu na upload dokumentů
 -------------------------------------------------
 
-Pro správny přenost nahraných dokumentů (přílohy životopisů apod.) je třeba dále v souboru **C:\\Windows\\System32\\inetsrv\\config\\applicationHost.config** na **Aplikačním serveru s DC3** nastavit:
+Pro správny přenost nahraných dokumentů (přílohy životopisů apod.) je třeba dále na **Aplikačním serveru s DC3** nastavit:
 
 1. Launch **Internet Information Services (IIS) Manager**
 2. Select the site that you are hosting your web application under it.
