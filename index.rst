@@ -1,12 +1,6 @@
 Instalace
 ===============================
 
-.. toctree::
-   :titlesonly:
-
-   hwsw_pozadavky
-   postup_instalace   
-   
 
 Úvod
 ---------------
@@ -21,3 +15,11 @@ skrze webové formuláře
 
 Následující příručka se věnuje postupu instalace a nastavení jak interní části pro administraci tak veřejné
 části pro publikování.
+
+.. toctree::
+   :titlesonly:
+
+   hwsw_pozadavky
+   postup_instalace   
+   
+
