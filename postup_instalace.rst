@@ -8,9 +8,15 @@ Instalace webové aplikace
 
 1. Na webovém serveru **veřejné části** v IIS je třeba vytvořit nový aplikační pool s názvem např. **DC3VyberovaRizeniPool**. Pool musí být nastaven jako **No managed code** (Bez spravovaného kódu).
 
+.. image:: /Img/PoolAVR.PNG
+
 2. V rozšiřujícím nastavení poolu je třeba zapnout vlastnost **Load User Profile** (Načíst profil uživatele) = True.
 
+.. image:: /Img/PoolAVR2.PNG
+
 3. Vytvořit novou webovou aplikaci a nasměrovat ji na adresář s buildem veřejné části modulu Výběrová řízení. Jako pool zvolit nově vytvořený.
+
+.. image:: /Img/PoolAVR3.PNG
 
 Import certifikátů
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -20,11 +26,7 @@ naimportovat příslušné certifikáty.
 
 1. Spustit konzolu pro import certifikátů přes Start > Run > mmc
 
-.. image:: /img/PoolAVR.PNG 
-
 2. Přes menu Soubor -> Přidat nebo odebrat modul snap-in vybrat Certifikáty a zvolit certifikáty na tomto počítači.
-
-.. image:: /img/PoolAVR2.PNG 
 
 3. Spustit import klientského certifikátu pro ověřování. Spuštění proveďte pomocí .cmd souboru **InstallCertVyberovaRizeni.cmd** spustit jako správce).
 
